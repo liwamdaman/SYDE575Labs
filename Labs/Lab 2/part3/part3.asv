@@ -1,0 +1,18 @@
+close all
+
+f = [0.3*ones(200,100) 0.7*ones(200,100)];
+% imshow(f);
+
+f_gaussian = imnoise(f, 'gaussian');
+figure
+imshow(f_gaussian);
+figure('gaussian noise histogram');
+imhist(
+
+f_salt_pepper = imnoise(f, 'salt & pepper');
+figure
+imshow(f_salt_pepper);
+
+f_speckle = imnoise(f, 'speckle', 0.04);
+figure
+imshow(f_salt_pepper);
